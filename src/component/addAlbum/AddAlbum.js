@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-
+import axios from 'axios'
 import AlbumInput from './AlbumInput';
 
 function AddAlbum() {
@@ -18,9 +18,10 @@ function AddAlbum() {
         setAlbumInfo({...albumInfo, [name]:value});
     } 
     
-    const handleSubmit = (e) => {
+    const handleSubmit =async (e) => {
         e.preventDefault();
-        console.log(albumInfo);
+        await axios.post(`http://localhost:8000/Albums`,albumInfo)
+             .then(res=>console.log(res.data["id"]));
     };
     
     return <AlbumInput imageChange={imageChange} handleChange={handleChange} onClick={handleSubmit}/>;
