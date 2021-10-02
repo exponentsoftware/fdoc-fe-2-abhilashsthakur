@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import Card from './Card'
 
 import axios from 'axios'
-import { list } from '@chakra-ui/styled-system'
 
 
 function List() {

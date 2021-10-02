@@ -23,8 +23,9 @@ function AddAlbum() {
         await axios.post(`http://localhost:8000/Albums`,albumInfo)
              .then(res=>console.log(res.data["id"]));
     };
-    
-    return <AlbumInput imageChange={imageChange} handleChange={handleChange} onClick={handleSubmit}/>;
+    const albumProps={imageChange:imageChange,handleChange:handleChange,onClick:handleSubmit}
+
+    return <AlbumInput {...albumProps}/>;
 }
 
 export default AddAlbum;

@@ -1,0 +1,40 @@
+{
+  "Albums": [
+    {
+      "id": 1,
+      "artist": "artist1",
+      "album": "album1",
+      "file": "rob23@gmail.com"
+    },
+    {
+      "artist": "artist2",
+      "album": "aalbum2",
+      "id": 2
+    },
+    {
+      "artist": "artis3",
+      "album": "album3",
+      "id": 3
+    },
+    {
+      "artist": "artist4",
+      "album": "album4",
+      "id": 4
+    },
+    {
+      "artist": "artist10",
+      "album": "ablum10",
+      "id": 5
+    },
+    {
+      "artist": "artist11",
+      "album": "album11",
+      "id": 6
+    },
+    {
+      "artist": "artist9",
+      "album": "alubm9",
+      "id": 7
+    }
+  ]
+}

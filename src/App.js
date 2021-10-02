@@ -1,23 +1,31 @@
 import React from 'react';
-import { BrowserRouter  as Router } from 'react-router-dom';
+import { BrowserRouter  as Router,Switch,Route } from 'react-router-dom';
 import List from './component/ViewAlbum/List';
 import './App.css';
 import { ChakraProvider, Container, Flex } from '@chakra-ui/react';
 import AddAlbum from './component/addAlbum/AddAlbum';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import NavigationTabs from './component/navigation/Navi';
 
 function App() {
   return (
+    <>
     <Router>
-    <ChakraProvider>
+      <NavigationTabs/>
+
+     <ChakraProvider>
+       <Switch>
+      
       <Container maxW='container.xl' p={10}>
         <Flex h="100vh" py={0}>
-        <AddAlbum />
+       <Route path="/addalbums" component={AddAlbum} />
+      <Route path="/viewalbums" component={List} />
       </Flex>
     </Container>
-    </ChakraProvider >
-      <List />
+    </Switch>
+    </ChakraProvider > 
     </Router>
+    </>
   );
 }
 
